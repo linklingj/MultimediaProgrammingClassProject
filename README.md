@@ -7,11 +7,11 @@
 > 모든 알고리즘은 라이브러리 호출이 아닌 픽셀 단위 연산으로 작성했습니다.
 
 <p align="center">
-  <img src="assets/4-g1.gif" width="420" alt="3D Illusion Hero" />
+  <img src="assets/3-4.png" width="420" alt="Painterly Rendering" />
 </p>
 
 <p align="center">
-  <em>Project 4 — Homography 기반 큐브 면 텍스처 매핑 (직접 구현한 역행렬 + 어파인 역변환)</em>
+  <em>Project 3 — Painterly Rendering : 이미지를 수채화 느낌으로 변환</em>
 </p>
 
 ---
@@ -34,8 +34,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
   <img src="https://img.shields.io/badge/OpenCV%20(IplImage)-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white" />
-  <img src="https://img.shields.io/badge/Win32-0078D6?style=for-the-badge&logo=windows&logoColor=white" />
 </p>
 
 - **언어**: C++ (C-style OpenCV API: `IplImage`, `CvScalar`, `cvGet2D`/`cvSet2D`)
@@ -148,14 +146,9 @@ f.val[i] = (d - b - c + a) / count;   // 단 4번 lookup
   <img src="assets/3-2.jpg" width="280" alt="페인털리 결과" />
 </p>
 <p align="center">
-  <img src="assets/3-3.png" width="280" alt="원본" />
+  <img src="assets/3-7.jpg" width="280" alt="원본" />
   &nbsp;&nbsp;
-  <img src="assets/3-4.png" width="280" alt="페인털리 결과" />
-</p>
-<p align="center">
-  <img src="assets/3-6.jpg" width="280" alt="원본" />
-  &nbsp;&nbsp;
-  <img src="assets/3-7.jpg" width="280" alt="페인털리 결과" />
+  <img src="assets/3-6.jpg" width="280" alt="페인털리 결과" />
 </p>
 
 ### 🎯 목표
@@ -165,6 +158,18 @@ f.val[i] = (d - b - c + a) / count;   // 단 4번 lookup
 - 레이어 5단계 (`brushSize = {30, 15, 7, 4, 2}`) — 큰 붓이 먼저, 점점 디테일을 더해가는 방식
 - 각 레이어마다 원본을 **Gaussian blur** → 레퍼런스로 사용
 - `PaintLayer()` — 격자 한 칸에서 캔버스와 레퍼런스의 차이가 가장 큰 점을 찾고, threshold 초과 시 그 점에 stroke 저장 → 무작위 순서로 그림
+<p align="center">
+  <table align="center">
+    <tr>
+      <td align="center"><img src="assets/3-3.png" width="280" alt="circle" /></td>
+      <td align="center"><img src="assets/3-4.png" width="280" alt="stroke" /></td>
+    </tr>
+    <tr>
+      <td align="center"><em>Circle</em></td>
+      <td align="center"><em>Stroke</em></td>
+    </tr>
+  </table>
+</p>
 - 두 가지 stroke 모드:
   - **CIRCLE** — 단순 원
   - **STROKE (LineBrush)** — `Brush`를 상속한 곡선 브러시
@@ -311,7 +316,7 @@ return err / count;
 ## 6️⃣ Metamorphosis — Beier–Neely 라인 기반 모핑
 
 <p align="center">
-  <img src="assets/6-1.png" width="280" alt="모핑 입력 1" />
+  <img src="assets/6-1.png" width="140" alt="모핑 입력 1" align="top" />
   &nbsp;&nbsp;
   <img src="assets/6-2.png" width="280" alt="모핑 결과" />
 </p>
