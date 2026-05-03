@@ -262,15 +262,9 @@ x1 /= w1; y1 /= w1;     // 동차좌표 정규화
 ## 5️⃣ Texture Synthesis — 비모수적 텍스처 합성
 
 <p align="center">
-  <img src="assets/5-g1.gif" width="500" alt="텍스처가 점차 채워지는 과정" />
-</p>
-
-<p align="center">
-  <em>오른쪽·아래 영역이 패치 매칭으로 점진적으로 합성되는 모습</em>
-</p>
-
-<p align="center">
-  <img src="assets/5.png" width="700" alt="합성 결과" />
+  <img src="assets/6-1.png" width="140" alt="모핑 입력 1" align="top" />
+  &nbsp;&nbsp;
+  <img src="assets/6-2.png" width="280" alt="모핑 결과" />
 </p>
 
 ### 🎯 목표
@@ -316,10 +310,17 @@ return err / count;
 ## 6️⃣ Metamorphosis — Beier–Neely 라인 기반 모핑
 
 <p align="center">
-  <img src="assets/6-1.png" width="140" alt="모핑 입력 1" align="top" />
-  &nbsp;&nbsp;
-  <img src="assets/6-2.png" width="280" alt="모핑 결과" />
+  <img src="assets/5-g1.gif" width="500" alt="텍스처가 점차 채워지는 과정" />
 </p>
+
+<p align="center">
+  <em>오른쪽·아래 영역이 패치 매칭으로 점진적으로 합성되는 모습</em>
+</p>
+
+<p align="center">
+  <img src="assets/5.png" width="700" alt="합성 결과" />
+</p>
+
 
 ### 🎯 목표
 두 이미지에 **대응 라인 쌍** 을 사용자가 그어두면, *t* 가 0 → 1로 변할 때 첫 이미지가 두 번째 이미지로 **부드럽게 변형** 된다.
