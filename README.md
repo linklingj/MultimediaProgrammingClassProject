@@ -406,12 +406,6 @@ cd 1AColorfulRussianEmpire
 - ✅ **Beier–Neely 라인 기반 모핑** + 양방향 워프 + 크로스 디졸브 (Project 6)
 - ✅ **마우스 인터랙션** 으로 라인 페어 입력 받는 GUI (Project 6)
 
-### 🧠 가장 크게 배운 점
-1. **시간복잡도 사고** — 같은 결과를 내더라도 SAT(O(1)) vs naive(O(k²)) 의 차이는 코드 한 줄이 아니라 **데이터 구조 선택** 이었다.
-2. **부호 있는 차이 vs 제곱 차이** — gradient 처럼 *방향* 이 중요한 곳에서는 제곱합을 쓰면 정보가 사라진다.
-3. **역방향 워핑** — 출력 픽셀에서 원본을 lookup하는 방식이 forward warping의 hole 문제를 깔끔히 해결한다.
-4. **시각적 디버깅** — `cvShowImage` 한 줄로 알고리즘이 어디서 잘못되는지 즉시 보였다.
-
 ---
 
 <p align="center">
